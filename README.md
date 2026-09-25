@@ -20,6 +20,20 @@ Download [Visiogen-Desktop-0.1.2-win64.zip](https://github.com/ahmedmurtazamalik
 
 The portable app requires Windows, desktop Microsoft Visio, PowerShell 7, and a signed-in Codex CLI for image-first generation. PDF workflows also require Poppler. The Generate form shows each candidate image for repair or approval before tracing. Generated VSDX files remain editable drafts to review in Visio.
 
+## Codex plugin
+
+Download [Visiogen-Codex-Plugin-0.1.2.zip](https://github.com/ahmedmurtazamalik/visiogen-downloads/releases/download/v0.1.2/Visiogen-Codex-Plugin-0.1.2.zip). This adds Visiogen guidance to Codex; it uses the CLI installed above and does not include the Visiogen engine or provider credentials.
+
+In PowerShell, from the directory containing the downloaded ZIP:
+
+```powershell
+Expand-Archive .\Visiogen-Codex-Plugin-0.1.2.zip -DestinationPath .\Visiogen-Codex-Plugin-0.1.2
+codex plugin marketplace add .\Visiogen-Codex-Plugin-0.1.2
+codex plugin add visiogen@visiogen-downloads
+```
+
+Keep the extracted folder in place and start a new Codex task to load the plugin. The ZIP contains a local marketplace and the plugin skill; it does not change an existing personal marketplace.
+
 ## Trace an image
 
 Native tracing requires Windows, desktop Microsoft Visio, PowerShell 7 (`pwsh`), and an authenticated Codex CLI on PATH.
@@ -32,6 +46,6 @@ Use a new artifact directory for each run. Successful output is `artifacts/figur
 
 ## Release contents
 
-The wheel includes the runtime Python package, Visio template and MIT license. The desktop download is a portable application package without loose Visiogen Python source files. Neither download includes development history or benchmark inputs and reports. Public releases are snapshots; changes to the development repository become available here when a new package is published.
+The wheel includes the runtime Python package, Visio template and MIT license. The desktop download is a portable application package without loose Visiogen Python source files. The Codex plugin download contains its marketplace manifest and usage skill. These downloads do not include development history or benchmark inputs and reports. Public releases are snapshots; changes to the development repository become available here when a new package is published.
 
 Release assets include `SHA256SUMS` for download verification.
