@@ -7,7 +7,7 @@ Public installation packages for Visiogen. Downloads require no GitHub account o
 Install [uv](https://docs.astral.sh/uv/getting-started/installation/), then run:
 
 ```powershell
-uv tool install "https://github.com/ahmedmurtazamalik/visiogen-downloads/releases/download/v0.1.2/visiogen-0.1.2-py3-none-any.whl"
+uv tool install "https://github.com/ahmedmurtazamalik/visiogen-downloads/releases/download/v0.1.3/visiogen-0.1.3-py3-none-any.whl"
 visiogen --help
 ```
 
@@ -16,19 +16,19 @@ Python 3.11 or newer is required; uv can provision Python when needed.
 
 ## Windows desktop app
 
-Download [Visiogen-Desktop-0.1.2-win64.zip](https://github.com/ahmedmurtazamalik/visiogen-downloads/releases/download/v0.1.2/Visiogen-Desktop-0.1.2-win64.zip), extract the whole folder, and open `Visiogen.exe`. Keep `Visiogen-worker.exe` and the `_internal` folder beside it.
+Download [Visiogen-Desktop-0.1.3-win64.zip](https://github.com/ahmedmurtazamalik/visiogen-downloads/releases/download/v0.1.3/Visiogen-Desktop-0.1.3-win64.zip), extract the whole folder, and open `Visiogen.exe`. Keep `Visiogen-worker.exe` and the `_internal` folder beside it.
 
-The portable app requires Windows, desktop Microsoft Visio, PowerShell 7, and a signed-in Codex CLI for image-first generation. PDF workflows also require Poppler. The Generate form shows each candidate image for repair or approval before tracing. Generated VSDX files remain editable drafts to review in Visio.
+The portable app requires Windows, desktop Microsoft Visio, PowerShell 7, and a signed-in Codex CLI for image-first generation. PDF workflows also require Poppler. The refreshed workspace includes a model guide and a connected-diagram logo. The Generate form shows each candidate image for repair or approval before tracing. Generated VSDX files remain editable drafts to review in Visio.
 
 ## Codex plugin
 
-Download [Visiogen-Codex-Plugin-0.1.2.zip](https://github.com/ahmedmurtazamalik/visiogen-downloads/releases/download/v0.1.2/Visiogen-Codex-Plugin-0.1.2.zip). This adds Visiogen guidance to Codex; it uses the CLI installed above and does not include the Visiogen engine or provider credentials.
+Download [Visiogen-Codex-Plugin-0.1.3.zip](https://github.com/ahmedmurtazamalik/visiogen-downloads/releases/download/v0.1.3/Visiogen-Codex-Plugin-0.1.3.zip). This adds Visiogen guidance to Codex; it uses the CLI installed above and does not include the Visiogen engine or provider credentials.
 
 In PowerShell, from the directory containing the downloaded ZIP:
 
 ```powershell
-Expand-Archive .\Visiogen-Codex-Plugin-0.1.2.zip -DestinationPath .\Visiogen-Codex-Plugin-0.1.2
-codex plugin marketplace add .\Visiogen-Codex-Plugin-0.1.2
+Expand-Archive .\Visiogen-Codex-Plugin-0.1.3.zip -DestinationPath .\Visiogen-Codex-Plugin-0.1.3
+codex plugin marketplace add .\Visiogen-Codex-Plugin-0.1.3
 codex plugin add visiogen@visiogen-downloads
 ```
 
